@@ -1,6 +1,6 @@
 ## Git
 
-remove merged branches
+Remove merged branches (-d locally)
 - ``git branch --merged dev | grep -v -E "(master|dev)" | xargs -n 1 git branch -d``
 
 If file is tracked
