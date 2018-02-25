@@ -15,3 +15,8 @@ Convert images
 - `find . -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -exec du -ch {} \+ | tail -1 `
 - `find . -type f -name "*.jpg" -exec convert {} -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace RGB {} \;`
 - `find . -type f \( -name "*.png" -o -name "*.gif" \) -exec convert {} -strip {} \;`
+
+## PHP
+
+Install different version of PHP
+- `add-apt-repository ppa:ondrej/php && apt-get update`
