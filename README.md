@@ -9,6 +9,9 @@ If file is tracked
 Modified files between 2 branches
 - ``git diff {} | grep -E "^diff --git" | cut -c14-``
 
+Force update to origin/master
+- ``git reset --hard origin/master``
+
 ## Bash
 
 Convert images
