@@ -9,7 +9,7 @@ If file is tracked
 Modified files between 2 branches
 - ``git diff {} | grep -E "^diff --git" | cut -c14-``
 
-Force update to origin/master
+Force checkout/pull origin/master
 - ``git reset --hard origin/master``
 
 ## Bash
