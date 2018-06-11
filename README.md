@@ -24,3 +24,8 @@ Convert images
 Install different version of PHP
 - `add-apt-repository ppa:ondrej/php && apt-get update`
 - `sudo update-alternatives --set php /usr/bin/php7.2`
+
+## Laravel
+
+Show Queries inside Tinker
+- `DB::listen(function ($query) { dump($query->sql); dump($query->bindings); dump($query->time); });`
