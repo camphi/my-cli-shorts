@@ -12,6 +12,26 @@ Modified files between 2 branches
 Force checkout/pull origin/master
 - ``git reset --hard origin/master``
 
+## Git-Svn
+
+maintaining a read only svn mirror of a git repository
+- http://www.kerrybuckley.org/2009/10/06/maintaining-a-read-only-svn-mirror-of-a-git-repository/
+```bash
+[svn-remote "svn"]
+	url = http://svn.example.com/foo/trunk
+	fetch = :refs/remotes/git-svn
+```
+```bash
+git svn fetch svn
+git checkout -b svn git-svn
+git merge master
+git svn dcommit
+git checkout master
+git rebase svn
+git branch -d svn
+```
+
+
 ## Bash
 
 Convert images
