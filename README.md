@@ -17,11 +17,14 @@ Force checkout/pull origin/master
 maintaining a read only svn mirror of a git repository
 - http://www.kerrybuckley.org/2009/10/06/maintaining-a-read-only-svn-mirror-of-a-git-repository/
 ```bash
+git clone ~git/repositories/foo/mainline.git ~git/repositories/svn-mirror/foo
+cd ~git/repositories/svn-mirror/foo
+vim .git/config
+...
 [svn-remote "svn"]
 	url = http://svn.example.com/foo/trunk
 	fetch = :refs/remotes/git-svn
-```
-```bash
+...
 git svn fetch svn
 git checkout -b svn git-svn
 git merge master
@@ -29,6 +32,8 @@ git svn dcommit
 git checkout master
 git rebase svn
 git branch -d svn
+...
+git svn dcommit
 ```
 
 
