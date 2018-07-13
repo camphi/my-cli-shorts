@@ -12,6 +12,11 @@ Modified files between 2 branches
 Force checkout/pull origin/master
 - ``git reset --hard origin/master``
 
+Checkout/Rm by Regex
+- ``git status --porcelain | cut -c 4- | grep {} | xargs git checkout``
+- ``git status --porcelain | cut -c 4- | grep {} | xargs rm``
+
+
 ## Git-Svn
 
 maintaining a read only svn mirror of a git repository
