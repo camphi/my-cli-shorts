@@ -42,7 +42,7 @@ git svn dcommit
 ```
 
 
-## Bash
+## Image
 
 Convert images
 - `find . -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -exec du -ch {} \+ | tail -1 `
