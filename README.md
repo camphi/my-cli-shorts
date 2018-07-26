@@ -59,3 +59,8 @@ Install different version of PHP
 
 Show Queries inside Tinker
 - `DB::listen(function ($query) { dump($query->sql); dump($query->bindings); dump($query->time); });`
+
+## Bash
+
+Remove CR from file with CRLF
+ - `tr -d '\r' < input.file > output.file`
