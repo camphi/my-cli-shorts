@@ -16,6 +16,13 @@ Checkout/Rm by Regex
 - ``git status --porcelain | cut -c 4- | grep {} | xargs git checkout``
 - ``git status --porcelain | cut -c 4- | grep {} | xargs rm``
 
+Update current branch from dev (add to .bashrc)
+```bash
+function jitMergeDev {
+    LASTCHECKOUTEDBRANCH=$(git branch | grep ^* | cut -sf2 -d\  );
+    git fetch && git checkout dev && git pull && git checkout $LASTCHECKOUTEDBRANCH && git merge dev
+}
+```
 
 ## Git-Svn
 
