@@ -67,3 +67,11 @@ Remove CR from file with CRLF
  ## Magento 2
  Flush All
  - `rm -rf pub/static/_cache/* pub/static/_requirejs/* pub/static/adminhtml/* pub/static/frontend/* generated/* var/di/* var/cache/* var/generation/* var/view_preprocessed/* var/page_cache/* && redis-cli flushall && php bin/magento cache:flush;`
+ 
+ Log
+```PHP
+$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
+$logger = new \Zend\Log\Logger();
+$logger->addWriter($writer);
+$logger->info('Your text message');
+```
