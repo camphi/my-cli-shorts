@@ -64,8 +64,12 @@ Show Queries inside Tinker
 Remove CR from file with CRLF
  - `tr -d '\r' < input.file > output.file`
 
+## MySql
 Get only one table from MySQL dump
- - ``sed -n -e '/DROP TABLE.*`mytable`/,/UNLOCK TABLES/p' dump.sql > mytable.sql``
+ - ``sed -n -e '/DROP TABLE.*`mytable`/,/UNLOCK TABLES/p' dump.sql``
+
+Get only one table structure from MySQL dump
+ - ``sed -n -e '/DROP TABLE.*`mytable`/,/ENGINE/p' dump.sql``
 
 ## Magento 2
  Flush All
