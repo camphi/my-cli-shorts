@@ -16,6 +16,9 @@ Checkout/Rm by Regex
 - ``git status --porcelain | cut -c 4- | grep {} | xargs git checkout``
 - ``git status --porcelain | cut -c 4- | grep {} | xargs rm``
 
+Compare with Meld
+- ``git difftool -gdt meld``
+
 ## Git-Svn
 
 maintaining a read only svn mirror of a git repository
