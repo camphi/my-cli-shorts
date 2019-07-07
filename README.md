@@ -74,6 +74,9 @@ Get only one table from MySQL dump
 Get only one table structure from MySQL dump
  - ``sed -n -e '/DROP TABLE.*`mytable`/,/ENGINE/p' dump.sql``
 
+Quickly load CSV into table
+ - ``mysql -p -uusername -e "LOAD DATA LOCAL INFILE 'file.csv' INTO TABLE \`databasename\`.\`tablename\` CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'"``
+
 ## Magento 2
  Flush All
  - `rm -rf pub/static/_cache/* pub/static/_requirejs/* pub/static/adminhtml/* pub/static/frontend/* generated/* var/di/* var/cache/* var/generation/* var/view_preprocessed/* var/page_cache/* && redis-cli flushall && php bin/magento cache:flush;`
