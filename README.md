@@ -19,6 +19,9 @@ Checkout/Rm by Regex
 Compare with Meld
 - ``git difftool -gdt meld``
 
+Revert deleted files from previous commit
+- ``git log --diff-filter=D --summary -n1 | grep -E '^ delete' | cut -d\  -f5- | xargs git checkout {} --``
+
 ## Git-Svn
 
 maintaining a read only svn mirror of a git repository
