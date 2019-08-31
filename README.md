@@ -81,6 +81,9 @@ Get only one table structure from MySQL dump
 Quickly load CSV into table
  - ``mysql -p -uusername -e "LOAD DATA LOCAL INFILE 'file.csv' INTO TABLE \`databasename\`.\`tablename\` CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n'"``
 
+Replace user for tiggers and views
+ - ``sed -e 's/DEFINER=`\w\+`/DEFINER=`{}`/' -i mysqldump.sql``
+
 ## XML
 Prettify
  - ``echo '{}' | xmllint --format -``
