@@ -70,6 +70,12 @@ Show Queries inside Tinker
 Remove CR from file with CRLF
  - `tr -d '\r' < input.file > output.file`
 
+First line to lowercase
+ - ``sed -i '1s/.*/\L&/' file.csv``
+
+First line to uppercase
+ - ``sed -i '1s/.*/\U&/' file.csv``
+
 ## MySql
 Get only one table from MySQL dump
  - ``sed -n -e '/DROP TABLE.*`mytable`/,/UNLOCK TABLES/p' dump.sql``
