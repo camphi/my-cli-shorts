@@ -92,7 +92,12 @@ Replace user for tiggers and views
 
 ## XML
 Prettify
- - ``echo '{}' | xmllint --format -``
+```bash
+xmllint --format <(cat <<EOL
+{}
+EOL
+)
+```
 
 ## Magento 2
  Flush All
