@@ -111,6 +111,9 @@ $logger->addWriter($writer);
 $logger->info('Your text message');
 ```
 
+ Find block that break full page cache
+- `grep -rnw 'app/' -e 'cacheable="false"'`
+
 ## PHP-FPM
  Continue working after giving the 200 OK. https://www.php.net/manual/en/function.fastcgi-finish-request.php
 ```PHP
