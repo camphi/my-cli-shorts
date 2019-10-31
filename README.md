@@ -27,6 +27,9 @@ Compare with Meld
 Revert deleted files from previous commit
 - ``git log --diff-filter=D --summary -n1 | grep -E '^ delete' | cut -d\  -f5- | xargs git checkout {} --``
 
+Return to origin
+- ``git reset --hard origin/<branch_name>``
+
 ## Git-Svn
 
 maintaining a read only svn mirror of a git repository
@@ -73,7 +76,7 @@ Show Queries inside Tinker
 ## Bash
 
 Remove CR from file with CRLF
- - `tr -d '\r' < input.file > output.file`
+ - ``tr -d '\r' < input.file > output.file``
 
 First line to lowercase
  - ``sed -i '1s/.*/\L&/' file.csv``
