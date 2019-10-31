@@ -1,3 +1,8 @@
+## Vim
+
+Disable vim automatic visual mode on mouse select
+- `mouse-=a`
+
 ## Git
 
 Remove merged branches (-d locally)
