@@ -98,6 +98,15 @@ Quickly load CSV into table
 Replace user for tiggers and views
  - ``sed -e 's/DEFINER=`\w\+`/DEFINER=`{}`/' -i mysqldump.sql``
 
+## JSON
+Prettify
+```bash
+jq <(cat <<EOL
+{}
+EOL
+)
+```
+
 ## XML
 Prettify
 ```bash
