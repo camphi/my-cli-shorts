@@ -54,6 +54,10 @@ git branch -d svn
 git svn dcommit
 ```
 
+## Awk
+
+Csv FPAT
+- `(?:[^",]|"(?:[^"]|"")*")*`
 
 ## Image
 
