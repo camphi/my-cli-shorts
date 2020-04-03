@@ -87,6 +87,9 @@ First line to lowercase
 
 First line to uppercase
  - ``sed -i '1s/.*/\U&/' file.csv``
+ 
+Php array to bash assoc hash
+ - ``arr=($(php -r '$arr = include("arr.php"); foreach($arr as $key => $val){echo " [\"" . addslashes($key) . "\"]=\"" . addslashes($val) . "\" ";    }'));``
 
 ## MySql
 Get only one table from MySQL dump
