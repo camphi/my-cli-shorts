@@ -90,7 +90,7 @@ First line to uppercase
  
 Php array to bash assoc hash
  - ``arr=($(php -r '$arr = include("arr.php"); foreach($arr as $key => $val){echo " [\"" . addslashes($key) . "\"]=\"" . addslashes($val) . "\" ";    }'));``
- - ``function _php_arr_echo_segment(){php -r '$a=include($argv[1]);foreach(explode(".",$argv[2]) as $s){if(isset($a[$s])){$a=$a[$s];}else{echo $argv[3];exit;}}echo json_encode($a);' -- $1 $2 $3}``
+ - ``function _php_arr_echo_segment(){php --run '$a=include($argv[1]);foreach(explode(".",$argv[2]) as $s){if(isset($a[$s])){$a=$a[$s];}else{echo $argv[3];exit;}}echo json_encode($a);' -- $1 $2 $3}``
 
 ## MySql
 Get only one table from MySQL dump
