@@ -109,19 +109,22 @@ Replace user for tiggers and views
 ## JSON
 Prettify
 ```bash
-jq <(cat <<EOL
+jq <<EOL
 {}
 EOL
-)
+```
+```bash
+python -m json.tool <<EOL
+{}
+EOL
 ```
 
 ## XML
 Prettify
 ```bash
-xmllint --format <(cat <<EOL
+xmllint --format <<EOL
 {}
 EOL
-)
 ```
 
 ## Magento 2
