@@ -58,6 +58,7 @@ git svn dcommit
 
 Csv FPAT
 - `(?:[^",]|"(?:[^"]|"")*")*`
+- `([^,]*)|("[^"]+")`
 
 ## Image
 
@@ -81,6 +82,9 @@ Show Queries inside Tinker
 
 Remove CR from file with CRLF
  - ``tr -d '\r' < input.file > output.file``
+
+Convert numbers from/to human readable strings
+ - `numfmt`
 
 First line to lowercase
  - ``sed -i '1s/.*/\L&/' file.csv``
@@ -106,6 +110,9 @@ Quickly load CSV into table
 Replace user for tiggers and views
  - ``sed -e 's/DEFINER=`\w\+`/DEFINER=`{}`/' -i mysqldump.sql``
 
+Tail multiple logs at once in one continuous feed
+ - ``parallel --tagstring "{}:" --line-buffer tail -f {} ::: one.log two.log``
+
 ## JSON
 Prettify
 ```bash
@@ -128,10 +135,10 @@ EOL
 ```
 
 ## Magento 2
- Flush All
+Flush All
  - `rm -rf pub/static/_cache/* pub/static/_requirejs/* pub/static/adminhtml/* pub/static/frontend/* generated/* var/di/* var/cache/* var/generation/* var/view_preprocessed/* var/page_cache/* && redis-cli flushall && php bin/magento cache:flush;`
  
- Log
+Log
 ```PHP
 $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/test.log');
 $logger = new \Zend\Log\Logger();
@@ -139,11 +146,15 @@ $logger->addWriter($writer);
 $logger->info('Your text message');
 ```
 
- Find block that break full page cache
+Find block that break full page cache
 - `grep -rnw 'app/' -e 'cacheable="false"'`
 
- PhpStorm URNs highlight
+PhpStorm URNs highlight
 - `bin/magento dev:urn-catalog:generate .idea/misc.xml`
+
+Test Customer Data
+ - You can reload customer data from the console: ``require('Magento_Customer/js/customer-data').reload(['availability'])``
+ - And can test them: ``require('Magento_Customer/js/customer-data').get('availability')().visible;``
 
 ## PHP-FPM
  Continue working after giving the 200 OK. https://www.php.net/manual/en/function.fastcgi-finish-request.php
